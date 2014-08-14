@@ -1,0 +1,99 @@
+<div class="container-fluid dashboard_{{infoData.fontSize}}">
+
+    <!-- LOADING SCREEN -->
+    <h1 class="h1_{{infoData.fontSize}}" id="loading" ng-show="allJobsSorted.length===0">Loading{{dots[0]}}{{dots[1]}}{{dots[2]}}{{dots[3]}}</h1>
+
+    <!-- MAIN VIEW -->
+    <g ng-hide="allJobsSorted.length===0">
+
+        <div class="col-lg-12" style="padding:0px" ng-repeat="jobs in allJobsSorted">
+
+            <!-- JOBS STATUS HEADING -->
+            <h1 class="h1_{{infoData.fontSize}}">{{getHeading($index, "h1")}}</h1>
+            <p ng-if="jobs.length===0" style="margin-left:15px">{{getHeading($index, "sub")}}</p>
+
+            <div class="col-lg-{{getBoxWidth()}}" ng-repeat="job in jobs">
+
+                <!-- BACKGROUND COLOR CURRENT JOB -->
+                <div class="{{job.color}}Status alert {{job.color}}" style="height: {{infoData.boxHeight}}px">
+
+                    <!-- CURRENT JOB NAME -->
+                    <p>{{removeUnderscore(job.name)}}</p>
+
+                    <!-- CURRENT JOB INFORMATION -->
+                    <div ng-show="infoData.showInfo" class="jobInfo_{{infoData.fontSize}} {{job.color}}JobInfo">
+
+                        <p ng-show="infoData.showNumberOfBuilds">Total amount of builds:
+                            <g ng-hide="job.builds[0].number===null">{{job.builds[0].number}}</g>
+                            <g ng-show="job.builds[0].number===null">None</g>
+                        </p>
+
+                        <p ng-show="infoData.showLastStableBuild">Last stable build:
+                            <g ng-show="job.lastStableBuild!=null">
+                                <a href="{{job.lastStableBuild.url}}" target="_blank">Build {{job.lastStableBuild.number}}</a>
+                            </g>
+                            <g ng-hide="job.lastStableBuild!=null">None</g>
+                        </p>
+
+                        <p ng-show="infoData.showLastCompletedBuild">Last completed build:
+                            <g ng-show="job.lastCompletedBuild!=null">
+                                <a href="{{job.lastCompletedBuild.url}}" target="_blank">Build {{job.lastCompletedBuild.number}}</a>
+                            </g>
+                            <g ng-hide="job.lastCompletedBuild!=null">None</g>
+                        </p>
+
+                        <p ng-show="infoData.showLastFailedBuild">Last failed build:
+                            <g ng-show="job.lastFailedBuild!=null">
+                                <a href="{{job.lastFailedBuild.url}}" target="_blank">Build {{job.lastFailedBuild.number}}</a>
+                            </g>
+                            <g ng-hide="job.lastFailedBuild!=null">None</g>
+                        </p>
+
+                        <p ng-show="infoData.showLastSuccessfulBuild">Last successful build:
+                            <g ng-show="job.lastSuccessfulBuild!=null">
+                                <a href="{{job.lastSuccessfulBuild.url}}" target="_blank">Build {{job.lastSuccessfulBuild.number}}</a>
+                            </g>
+                            <g ng-hide="job.lastSuccessfulBuild!=null">None</g>
+                        </p>
+
+                        <p ng-show="infoData.showLastUnstableBuild">Last unstable build:
+                            <g ng-show="job.lastUnstableBuild!=null">
+                                <a href="{{job.lastUnstableBuild.url}}" target="_blank">Build {{job.lastUnstableBuild.number}}</a>
+                            </g>
+                            <g ng-hide="job.lastUnstableBuild!=null">None</g>
+                        </p>
+
+                        <p ng-show="infoData.showLastUnsuccessfulBuild">Last unsuccessful build:
+                            <g ng-show="job.lastUnsuccessfulBuild!=null">
+                                <a href="{{job.lastUnsuccessfulBuild.url}}" target="_blank">Build {{job.lastUnsuccessfulBuild.number}}</a>
+                            </g>
+                            <g ng-hide="job.lastUnsuccessfulBuild!=null">None</g>
+                        </p>
+
+                    </div>
+                    <!-- END CURRENT JOB INFO -->
+
+                    <!-- HEALTH REPORT -->
+                    <div ng-show="infoData.showHealthReports && infoData.showInfo && job.healthReport!=undefined">
+                        <g ng-if="job.healthReport[0].score >= 0 && job.healthReport[0].score < 20"><img
+                                src="/app/img/0.svg" class="health svg_{{infoData.HRSize}}"></g>
+                        <g ng-if="job.healthReport[0].score >= 20 && job.healthReport[0].score < 40"><img
+                                src="/app/img/20.svg" class="health svg_{{infoData.HRSize}}" ></g>
+                        <g ng-if="job.healthReport[0].score >= 40 && job.healthReport[0].score < 60"><img
+                                src="/app/img/40.svg" class="health svg_{{infoData.HRSize}}" ></g>
+                        <g ng-if="job.healthReport[0].score >= 60 && job.healthReport[0].score < 80"><img
+                                src="/app/img/60.svg" class="health svg_{{infoData.HRSize}}" ></g>
+                        <g ng-if="job.healthReport[0].score >= 80 && job.healthReport[0].score <= 100"><img
+                                src="/app/img/80.svg" class="health svg_{{infoData.HRSize}}" ></g>
+                    </div>
+                    <!-- END HEALTH REPORT -->
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </g>
+
+</div>

@@ -1,0 +1,279 @@
+{
+    "assignedLabels" : [
+        {
+
+        }
+    ],
+    "mode" : "NORMAL",
+    "nodeDescription" : "the master Jenkins node",
+    "nodeName" : "",
+    "numExecutors" : 1,
+    "description" : null,
+    "jobs" : [
+        {
+            "name" : "angular-phonecat",
+            "url" : "http://ci.angularjs.org/job/angular-phonecat/",
+            "color" : "blue"
+        },
+        {
+            "name" : "angular-phonecat auto-update",
+            "url" : "http://ci.angularjs.org/job/angular-phonecat%20auto-update/",
+            "color" : "blue"
+        },
+        {
+            "name" : "angular-phonecat-igor",
+            "url" : "http://ci.angularjs.org/job/angular-phonecat-igor/",
+            "color" : "blue"
+        },
+        {
+            "name" : "angular-seed-igor",
+            "url" : "http://ci.angularjs.org/job/angular-seed-igor/",
+            "color" : "red"
+        },
+        {
+            "name" : "angular-seed-master",
+            "url" : "http://ci.angularjs.org/job/angular-seed-master/",
+            "color" : "red"
+        },
+        {
+            "name" : "angular-sites",
+            "url" : "http://ci.angularjs.org/job/angular-sites/",
+            "color" : "blue"
+        },
+        {
+            "name" : "angular.dart-chirayu",
+            "url" : "http://ci.angularjs.org/job/angular.dart-chirayu/",
+            "color" : "red"
+        },
+        {
+            "name" : "angular.dart-jdeboer",
+            "url" : "http://ci.angularjs.org/job/angular.dart-jdeboer/",
+            "color" : "red"
+        },
+        {
+            "name" : "angular.dart-master",
+            "url" : "http://ci.angularjs.org/job/angular.dart-master/",
+            "color" : "disabled"
+        },
+        {
+            "name" : "angular.dart-master-dev",
+            "url" : "http://ci.angularjs.org/job/angular.dart-master-dev/",
+            "color" : "disabled"
+        },
+        {
+            "name" : "angular.dart-matias",
+            "url" : "http://ci.angularjs.org/job/angular.dart-matias/",
+            "color" : "red"
+        },
+        {
+            "name" : "angular.dart-misko",
+            "url" : "http://ci.angularjs.org/job/angular.dart-misko/",
+            "color" : "red"
+        },
+        {
+            "name" : "angular.js-angular-master",
+            "url" : "http://ci.angularjs.org/job/angular.js-angular-master/",
+            "color" : "blue"
+        },
+        {
+            "name" : "angular.js-angular-master-mobile",
+            "url" : "http://ci.angularjs.org/job/angular.js-angular-master-mobile/",
+            "color" : "blue"
+        },
+        {
+            "name" : "angular.js-angular-release",
+            "url" : "http://ci.angularjs.org/job/angular.js-angular-release/",
+            "color" : "blue"
+        },
+        {
+            "name" : "angular.js-angular-v1.0.x",
+            "url" : "http://ci.angularjs.org/job/angular.js-angular-v1.0.x/",
+            "color" : "blue"
+        },
+        {
+            "name" : "angular.js-angular-v1.2.x",
+            "url" : "http://ci.angularjs.org/job/angular.js-angular-v1.2.x/",
+            "color" : "blue"
+        },
+        {
+            "name" : "angular.js-braden",
+            "url" : "http://ci.angularjs.org/job/angular.js-braden/",
+            "color" : "red"
+        },
+        {
+            "name" : "angular.js-brian",
+            "url" : "http://ci.angularjs.org/job/angular.js-brian/",
+            "color" : "blue"
+        },
+        {
+            "name" : "angular.js-caitlin",
+            "url" : "http://ci.angularjs.org/job/angular.js-caitlin/",
+            "color" : "blue"
+        },
+        {
+            "name" : "angular.js-chirayu",
+            "url" : "http://ci.angularjs.org/job/angular.js-chirayu/",
+            "color" : "blue"
+        },
+        {
+            "name" : "angular.js-igor",
+            "url" : "http://ci.angularjs.org/job/angular.js-igor/",
+            "color" : "blue"
+        },
+        {
+            "name" : "angular.js-james",
+            "url" : "http://ci.angularjs.org/job/angular.js-james/",
+            "color" : "red"
+        },
+        {
+            "name" : "angular.js-jbdeboer-2",
+            "url" : "http://ci.angularjs.org/job/angular.js-jbdeboer-2/",
+            "color" : "red"
+        },
+        {
+            "name" : "angular.js-jeff",
+            "url" : "http://ci.angularjs.org/job/angular.js-jeff/",
+            "color" : "red"
+        },
+        {
+            "name" : "angular.js-ken",
+            "url" : "http://ci.angularjs.org/job/angular.js-ken/",
+            "color" : "blue"
+        },
+        {
+            "name" : "angular.js-matias",
+            "url" : "http://ci.angularjs.org/job/angular.js-matias/",
+            "color" : "blue"
+        },
+        {
+            "name" : "angular.js-misko",
+            "url" : "http://ci.angularjs.org/job/angular.js-misko/",
+            "color" : "red"
+        },
+        {
+            "name" : "angular.js-pawel",
+            "url" : "http://ci.angularjs.org/job/angular.js-pawel/",
+            "color" : "blue"
+        },
+        {
+            "name" : "angular.js-pete",
+            "url" : "http://ci.angularjs.org/job/angular.js-pete/",
+            "color" : "blue"
+        },
+        {
+            "name" : "angular.js-rado",
+            "url" : "http://ci.angularjs.org/job/angular.js-rado/",
+            "color" : "red"
+        },
+        {
+            "name" : "angular.js-tobias",
+            "url" : "http://ci.angularjs.org/job/angular.js-tobias/",
+            "color" : "blue"
+        },
+        {
+            "name" : "angular.js-vojta",
+            "url" : "http://ci.angularjs.org/job/angular.js-vojta/",
+            "color" : "blue"
+        },
+        {
+            "name" : "angularjs.org",
+            "url" : "http://ci.angularjs.org/job/angularjs.org/",
+            "color" : "red"
+        },
+        {
+            "name" : "angularjs.org-health",
+            "url" : "http://ci.angularjs.org/job/angularjs.org-health/",
+            "color" : "blue_anime"
+        },
+        {
+            "name" : "angularui-bootstrap",
+            "url" : "http://ci.angularjs.org/job/angularui-bootstrap/",
+            "color" : "blue"
+        },
+        {
+            "name" : "cleanup angularjs.org",
+            "url" : "http://ci.angularjs.org/job/cleanup%20angularjs.org/",
+            "color" : "disabled"
+        },
+        {
+            "name" : "server-reboot",
+            "url" : "http://ci.angularjs.org/job/server-reboot/",
+            "color" : "blue"
+        },
+        {
+            "name" : "test_regex",
+            "url" : "http://ci.angularjs.org/job/test_regex/",
+            "color" : "blue"
+        },
+        {
+            "name" : "Upgrade Dart VM",
+            "url" : "http://ci.angularjs.org/job/Upgrade%20Dart%20VM/",
+            "color" : "blue"
+        },
+        {
+            "name" : "Upgrade Dart VM to stable",
+            "url" : "http://ci.angularjs.org/job/Upgrade%20Dart%20VM%20to%20stable/",
+            "color" : "disabled"
+        }
+    ],
+    "overallLoad" : {
+
+    },
+    "primaryView" : {
+        "name" : "All",
+        "url" : "http://ci.angularjs.org/"
+    },
+    "quietingDown" : false,
+    "slaveAgentPort" : 0,
+    "unlabeledLoad" : {
+
+    },
+    "useCrumbs" : false,
+    "useSecurity" : true,
+    "views" : [
+        {
+            "name" : "All",
+            "url" : "http://ci.angularjs.org/"
+        },
+        {
+            "name" : "AngularJS",
+            "url" : "http://ci.angularjs.org/view/AngularJS/"
+        },
+        {
+            "name" : "AngularJS Dev",
+            "url" : "http://ci.angularjs.org/view/AngularJS%20Dev/"
+        },
+        {
+            "name" : "Chirayu's",
+            "url" : "http://ci.angularjs.org/view/Chirayu's/"
+        },
+        {
+            "name" : "Dart",
+            "url" : "http://ci.angularjs.org/view/Dart/"
+        },
+        {
+            "name" : "Igor's",
+            "url" : "http://ci.angularjs.org/view/Igor's/"
+        },
+        {
+            "name" : "Matias'",
+            "url" : "http://ci.angularjs.org/view/Matias'/"
+        },
+        {
+            "name" : "Misko's",
+            "url" : "http://ci.angularjs.org/view/Misko's/"
+        },
+        {
+            "name" : "Tobias'",
+            "url" : "http://ci.angularjs.org/view/Tobias'/"
+        },
+        {
+            "name" : "Vojta's",
+            "url" : "http://ci.angularjs.org/view/Vojta's/"
+        },
+        {
+            "name" : "angular-seed",
+            "url" : "http://ci.angularjs.org/view/angular-seed/"
+        }
+    ]
+}

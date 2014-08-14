@@ -1,0 +1,13 @@
+{
+    "pages" : [
+        {
+            "name" : "BlueView",
+            "url" : "http://145.119.169.127:8080/view/BlueView/api/json?pretty=true"
+
+        },
+        {
+            "name" : "TM",
+            "url" : "http://145.119.169.127:8080/view/PSH-TM/api/json?pretty=true"
+        }
+    ]
+}

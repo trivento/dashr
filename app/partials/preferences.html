@@ -1,0 +1,42 @@
+<div ng-controller="PreferencesCtrl" class="container">
+    <g style="position: fixed; right:5px; top:5px; z-index:1; padding: 10px; text-align:right">
+        <div>
+            <button type="button" class="btn btn-default btn-lg" ng-click="showPreferences=!showPreferences">
+                <span class="glyphicon glyphicon-cog"></span>
+            </button>
+
+            <div ng-show="showPreferences" style="background: gray; padding:5px; text-align:left">
+                <form role="form">
+                Show Info                           <input class="right" type="checkbox" ng-model="tempUserPrefs.showInfo" ng-change="submit()">
+                <br>Show health reports             <input class="right" type="checkbox" ng-model="tempUserPrefs.showHealthReports" ng-change="submit()">
+                <br>Show number of builds           <input class="right" type="checkbox" ng-model="tempUserPrefs.showNumberOfBuilds" ng-change="submit()">
+                <br>Show last completed build       <input class="right" type="checkbox" ng-model="tempUserPrefs.showLastCompletedBuild" ng-change="submit()">
+                <br>Show last stable build          <input class="right" type="checkbox" ng-model="tempUserPrefs.showLastStableBuild" ng-change="submit()">
+                <br>Show last failed build          <input class="right" type="checkbox" ng-model="tempUserPrefs.showLastFailedBuild" ng-change="submit()">
+                <br>Show last successful build      <input class="right" type="checkbox" ng-model="tempUserPrefs.showLastSuccessfulBuild" ng-change="submit()">
+                <br>Show last unstable build        <input class="right" type="checkbox" ng-model="tempUserPrefs.showLastUnstableBuild" ng-change="submit()">
+                <br>Show last unsuccessful build    <input class="right" type="checkbox" ng-model="tempUserPrefs.showLastUnsuccessfulBuild" ng-change="submit()">
+                <br>Font size                       <select class="form-control" ng-model="tempUserPrefs.fontSize" ng-change="submit()">
+                                                        <option>s</option>
+                                                        <option>m</option>
+                                                        <option>l</option>
+                                                    </select>
+                <br>Health report image size        <select class="form-control" ng-model="tempUserPrefs.HRSize" ng-change="submit()">
+                                                        <option>s</option>
+                                                        <option>m</option>
+                                                        <option>l</option>
+                                                    </select>
+                <br>Boxes inline                    <select class="form-control" value=1>
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                        <option>4</option>
+                                                        <option>6</option>
+                                                        <option>12</option>
+                                                    </select>
+                <br>Box height                      <input type="text" ng-model="tempUserPrefs.boxHeight" ng-change="submit()" value="300">
+                </form>
+            </div>
+        </div>
+    </g>
+</div>

@@ -1,0 +1,188 @@
+body {
+    background-image:url('../img/diagonalGrayStripes.png');
+}
+@font-face {
+	font-family:thinFont;
+	src: url('../fonts/basictitlefont.ttf');
+}
+
+/* Loading screen */
+#loading {
+    width:200px;
+    height:50px;
+    position:absolute;
+    margin-top:-25px;
+    margin-left:-100px;
+    top:50%;
+    left:50%;
+}
+
+/* Font-size handling default text */
+.dashboard_s, .dashboard_m, .dashboard_l {
+    color: white;
+    font-family: thinFont;
+    min-height : 1200px;
+}
+.dashboard_s {
+    font-size: 24px;
+}
+.dashboard_m {
+    font-size: 36px;
+}
+.dashboard_l {
+    font-size: 48px;
+}
+
+/* Font-size handling headers */
+h1{
+    font-weight: bold;
+}
+.h1_s {
+    font-size: 40px;
+}
+.h1_m {
+    font-size: 56px;
+}
+.h1_l {
+    font-size: 72px;
+}
+
+/* job boxes */
+.redStatus, .blueStatus, .disabledStatus, .yellowStatus {
+    color: white;
+
+    position:relative;
+}
+.blue, .red, .yellow, .disabled {
+    padding:10px;
+    border: none;
+}
+.blue {
+    background-color :#53CC71;
+}
+.red {
+    background-color : #CC808F;
+}
+.yellow {
+    color: black;
+    background-color: #DED981;
+}
+.disabled {
+    color: white;
+    background-color: #999999;
+}
+
+/* Health reports */
+.health {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    margin: 10px;
+    background-color: rgba(255,255,255,0.5);
+}
+/* SVG */
+.svg_s {
+    width: 50px;
+    padding: 5px;
+}
+.svg_m {
+    width: 80px;
+    padding: 8px;
+}
+.svg_l {
+    width: 110px;
+    padding: 11px;
+}
+
+/* Font-size and position handling job information */
+.jobInfo_s, .jobInfo_m, .jobInfo_l {
+    position: absolute;
+    bottom: 0px;
+    margin-bottom: 10px;
+}
+.jobInfo_s {
+    font-size: 14px;
+}
+.jobInfo_m {
+    font-size: 24px
+}
+.jobInfo_l {
+   font-size: 36px;
+}
+.jobInfo_s p, .jobInfo_m p, .jobInfo_l p {
+    margin-bottom: -5px;
+}
+.jobInfo_s a:link, .jobInfo_m a:link, .jobInfo_l a:link {
+    text-decoration: none;
+    font-weight: bold;
+}
+/** color red info text **/
+ .redJobInfo p {
+     color: #99404C;
+ }
+ .redJobInfo a:link {
+     color: #52191D;
+ }
+ .redJobInfo a:hover {
+     color: #380D10;
+ }
+ .redJobInfo a:visited {
+     color: #52191D;
+ }
+
+ /** color yellow info text **/
+ .yellowJobInfo p {
+     color: #8A8750;
+ }
+ .yellowJobInfo a:link {
+     color: #52191D;
+ }
+ .yellowJobInfo a:hover {
+     color: #380D10;
+ }
+ .yellowJobInfo a:visited {
+     color: #52191D;
+ }
+
+ /** color green info text **/
+ .blueJobInfo p {
+     color: #109933;
+ }
+ .blueJobInfo a:link {
+     color: #09571D;
+ }
+ .blueJobInfo a:hover {
+     color: #063612;
+ }
+ .blueJobInfo a:visited {
+     color: #52191D;
+ }
+
+ /** color gray info text **/
+ .disabledJobInfo p {
+     color: #596361;
+ }
+ .disabledJobInfo a:link {
+     color: #3B4241;
+ }
+ .disabledJobInfo a:hover {
+     color: #1E2120;
+ }
+ .disabledJobInfo a:visited {
+     color: #1E2120;
+ }
+/* align right */
+.right {
+    position: absolute;
+    right: 15px;
+}
+
+/* Footer */
+.footer {
+    padding: 5px;
+    background-color: rgba(255,255,255,.4);
+    text-align: center;
+}
+
+
+
