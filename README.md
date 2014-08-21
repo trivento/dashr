@@ -44,16 +44,16 @@ the data of your project can be visualised with your own preferences.
   When using depth 1 a lot more information is available. In preferences.js each piece of information
   can be set to 'show' or 'hide'.
   Other preferences:
-  -Font Size:
+- Font Size:
   	Values: 			["s", "m", "l"] (small, medium, large)
   	Description: 		Scales all text
-  -Health Report Size:
+- Health Report Size:
   	Values: 			["s", "m", "l"] (small, medium, large)
   	Description: 		Scales the health report image.
-  -Boxes Inline
+- Boxes Inline
   	Values:				[1, 2, 3, 4, 6, 12]
   	Description:		Defines how many boxes will be displayed horizontally 1, 2, 3, 4, 6 or 12
-  -Box Height
+- Box Height
   	Values: 			[0..infinite]
   	Description:		Sets the height for all boxes
 
