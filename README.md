@@ -58,7 +58,7 @@ the data of your project can be visualised with your own preferences.
   	Description:		Sets the height for all boxes
 
 
-## Development with angular-phonecat
+## Development with Dashr
 
 The following docs describe how you can test and develop further this application.
 
@@ -86,4 +86,7 @@ it whenever you like.
 - When the data keeps loading there might be a problem with authentication. When this message pops up in console: 
   "No 'Access-Control-Allow-Origin' header is present on the requested resource." the CORS requests must be enabled in the browser.
 
-## Contact
+## Authors
+
+- Henk Jurriens @henkjurriens
+- Chantal Steur @steur36
