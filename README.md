@@ -33,27 +33,27 @@ the data of your project can be visualised with your own preferences.
 - Read the Development section at the end to familiarize yourself with running and developing
   an angular application.
   
-## Depth
+### Depth
   The url that is used can change in depth. Using depth 0 returns less information then a
   higher depth, and is therefor faster. The depth is given in the url, for example: 
   
   https://ci.jenkins-ci.org/view/All/api/json?pretty=true&depth=0      <---Change depth here
   
-## Preferences
+### Preferences
   When using depth 0 the only information that can be displayed is the status and the name of a job. The rest will return 'none'.
   When using depth 1 a lot more information is available. In preferences.js each piece of information
   can be set to 'show' or 'hide'.
   Other preferences:
-  -fontSize:
+  -Font Size:
   	Values: 			["s", "m", "l"] (small, medium, large)
   	Description: 		Scales all text
-  -HRSize:
+  -Health Report Size:
   	Values: 			["s", "m", "l"] (small, medium, large)
   	Description: 		Scales the health report image.
-  -BoxesInline
+  -Boxes Inline
   	Values:				[1, 2, 3, 4, 6, 12]
   	Description:		Defines how many boxes will be displayed horizontally 1, 2, 3, 4, 6 or 12
-  -boxHeight
+  -Box Height
   	Values: 			[0..infinite]
   	Description:		Sets the height for all boxes
 

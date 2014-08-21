@@ -1,34 +1,41 @@
 <!doctype html>
-<html lang="en" ng-app="jenkinsStatus">
-<head>
-  <META HTTP-EQUIV="refresh" CONTENT="60">
-  <meta charset="utf-8">
-  <title>Dashboard</title>
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-  <link rel="stylesheet" href="css/app.css">
+<html lang="en" ng-app="dashr">
+    <head>
 
-  <script src="bower_components/jquery/jquery.js"></script>
-  <script src="bower_components/angular/angular.js"></script>
-  <script src="bower_components/angular-route/angular-route.js"></script>
-  <script src="bower_components/angular-resource/angular-resource.js"></script>
-  <script src="js/app.js"></script>
-  <script src="js/controllers.js"></script>
-  <script src="js/services.js"></script>
-  <script src="directives/preferences.js"></script>
-  <script src="js/ui-bootstrap-tpls-0.11.0.min.js"></script>
+        <META HTTP-EQUIV="refresh" CONTENT="60">
+        <meta charset="utf-8">
 
-</head>
-<body>
+        <title>Dashboard</title>
 
-  <div class="view-container">
-    <preferences></preferences>
-    <div ng-view class="view-frame"></div>
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="css/app.css">
 
-  </div>
+        <script src="bower_components/jquery/jquery.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="bower_components/angular-resource/angular-resource.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/controllers.js"></script>
+        <script src="js/services.js"></script>
+        <script src="directives/preferences.js"></script>
+        <script src="js/ui-bootstrap-tpls-0.11.0.min.js"></script>
 
-  <div class="footer">
-      <img src="/app/img/LogoTrivento_Klein.png">
-  </div>
+    </head>
 
-</body>
+    <body>
+
+        <div class="view-container">
+
+            <!-- Preferences directive -->
+            <preferences></preferences>
+
+            <div ng-view class="view-frame"></div>
+
+        </div>
+
+        <div class="footer">
+            <img src="/app/img/LogoTrivento_Klein.png">
+        </div>
+
+    </body>
 </html>

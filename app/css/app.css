@@ -171,11 +171,6 @@ h1{
  .disabledJobInfo a:visited {
      color: #1E2120;
  }
-/* align right */
-.right {
-    position: absolute;
-    right: 15px;
-}
 
 /* Footer */
 .footer {

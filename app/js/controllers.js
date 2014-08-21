@@ -4,9 +4,12 @@
 
 var dashboardControllers = angular.module('dashboardControllers', []);
 
-dashboardControllers.controller('DashboardCtrl', ['$scope', 'Dashboard', '$timeout',
+
+/* Jobs Controller */
+dashboardControllers.controller('JobsCtrl', ['$scope', 'Dashboard', '$timeout',
   function($scope, Dashboard, $timeout) {
 
+    //Parse user preferences from local storage
     var a = localStorage.getItem("userPrefs");
     $scope.infoData = JSON.parse(a);
 
@@ -77,7 +80,7 @@ dashboardControllers.controller('DashboardCtrl', ['$scope', 'Dashboard', '$timeo
                         break;
                     }
             }
-        $scope.allJobsSorted.push($scope.allRed, $scope.allYellow, $scope.allGreen, $scope.allDisabled)
+        $scope.allJobsSorted.push($scope.allRed, $scope.allYellow, $scope.allGreen, $scope.allDisabled);
     });
 
     //Remove underscore from job name
@@ -124,14 +127,15 @@ dashboardControllers.controller('DashboardCtrl', ['$scope', 'Dashboard', '$timeo
     }
   }]);
 
+/* Preferences Controller */
 dashboardControllers.controller('PreferencesCtrl', ['$scope',
   function($scope)
   {
+    //Set default preferences in local storage if local storage is empty
     if(localStorage.getItem("userPrefs")===null)
     {
-        console.log("nee");
         $scope.tempUserPrefs = {
-                                   "showInfo"                  : false,
+                                   "hideInfo"                  : false,
                                    "showHealthReports"         : false,
                                    "showNumberOfBuilds"        : false,
                                    "showLastCompletedBuild"    : false,
@@ -155,6 +159,7 @@ dashboardControllers.controller('PreferencesCtrl', ['$scope',
         $scope.tempUserPrefs = JSON.parse(a);
     }
 
+    //Rewrite preferences to local storage
     $scope.submit = function() {
         localStorage.setItem("userPrefs", JSON.stringify($scope.tempUserPrefs));
     }

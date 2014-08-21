@@ -2,25 +2,25 @@
 
 /* App Module */
 
-var jenkinsStatus = angular.module('jenkinsStatus', [
+var dashr = angular.module('dashr', [
   'ngRoute',
   'ui.bootstrap',
   'dashboardControllers',
   'dashboardServices',
-  'jenkinsStatus.directive',
+  'dashr.directive',
   'ngResource'
 ]);
 
-jenkinsStatus.config(['$routeProvider',
+dashr.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
       when('/dashboard', {
         templateUrl: 'partials/dashboard.html',
-        controller: 'DashboardCtrl'
+        controller: 'JobsCtrl'
       }).
       otherwise({
         redirectTo: '/dashboard'
       });
   }]);
 
-angular.module('jenkinsStatus.directive', []);
+angular.module('dashr.directive', []);

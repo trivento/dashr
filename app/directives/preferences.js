@@ -1,4 +1,4 @@
-angular.module('jenkinsStatus.directive').directive('preferences', function()
+angular.module('dashr.directive').directive('preferences', function()
 {
     return {
         restrict: 'E',

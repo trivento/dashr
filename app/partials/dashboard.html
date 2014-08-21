@@ -4,7 +4,7 @@
     <h1 class="h1_{{infoData.fontSize}}" id="loading" ng-show="allJobsSorted.length===0">Loading{{dots[0]}}{{dots[1]}}{{dots[2]}}{{dots[3]}}</h1>
 
     <!-- MAIN VIEW -->
-    <g ng-hide="allJobsSorted.length===0">
+    <div ng-hide="allJobsSorted.length===0">
 
         <div class="col-lg-12" style="padding:0px" ng-repeat="jobs in allJobsSorted">
 
@@ -21,7 +21,7 @@
                     <p>{{removeUnderscore(job.name)}}</p>
 
                     <!-- CURRENT JOB INFORMATION -->
-                    <div ng-show="infoData.showInfo" class="jobInfo_{{infoData.fontSize}} {{job.color}}JobInfo">
+                    <div ng-hide="infoData.hideInfo" class="jobInfo_{{infoData.fontSize}} {{job.color}}JobInfo">
 
                         <p ng-show="infoData.showNumberOfBuilds">Total amount of builds:
                             <g ng-hide="job.builds[0].number===null">{{job.builds[0].number}}</g>
@@ -74,7 +74,7 @@
                     <!-- END CURRENT JOB INFO -->
 
                     <!-- HEALTH REPORT -->
-                    <div ng-show="infoData.showHealthReports && infoData.showInfo && job.healthReport!=undefined">
+                    <div ng-show="infoData.showHealthReports && infoData.hideInfo===false && job.healthReport!=undefined">
                         <g ng-if="job.healthReport[0].score >= 0 && job.healthReport[0].score < 20"><img
                                 src="/app/img/0.svg" class="health svg_{{infoData.HRSize}}"></g>
                         <g ng-if="job.healthReport[0].score >= 20 && job.healthReport[0].score < 40"><img
@@ -94,6 +94,6 @@
 
         </div>
 
-    </g>
+    </div>
 
 </div>
