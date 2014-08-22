@@ -7,7 +7,7 @@ var dashr = angular.module('dashr', [
   'ui.bootstrap',
   'dashboardControllers',
   'dashboardServices',
-  'dashr.directive',
+  'dashboardFilters',
   'ngResource'
 ]);
 
@@ -22,5 +22,3 @@ dashr.config(['$routeProvider',
         redirectTo: '/dashboard'
       });
   }]);
-
-angular.module('dashr.directive', []);
