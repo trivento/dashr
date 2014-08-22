@@ -1,5 +1,4 @@
 <div class="container-fluid dashboard_{{infoData.fontSize}}">
-
     <!-- HIDE/DISPLAY JOBS MENU -->
     <div class="containerDisplayJobsMenu">
         <button type="button" class="btn btn-default btn-xs" ng-click="showDisplayJobsMenu=!showDisplayJobsMenu">
@@ -91,7 +90,7 @@
                 <!-- BACKGROUND COLOR CURRENT JOB -->
                 <div class="{{job.color}}Status alert {{job.color}}" style="height: {{infoData.boxHeight}}px">
 
-                    <div class="deleteButton" ng-click="deleteName(job.name)"><span class="glyphicon glyphicon-remove"></span></div>
+                    <div class="deleteButton" ng-click="deleteName(job.name)"><a class="glyphicon glyphicon-remove"></a></div>
 
                     <!-- CURRENT JOB NAME -->
                     <p>{{removeUnderscore(job.name)}}</p>

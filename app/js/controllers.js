@@ -66,6 +66,7 @@ dashboardControllers.controller('JobsCtrl', ['$scope', 'Dashboard', '$timeout',
           localStorage.removeItem("hiddenJobs");
           location.reload();
     }
+    $scope.onlyOnStartup = true;
 
     //Animation of loading dots
     $scope.dots = ["", "", "", ""];
@@ -119,13 +120,14 @@ dashboardControllers.controller('JobsCtrl', ['$scope', 'Dashboard', '$timeout',
         $scope.allJobsSorted.push($scope.allRed, $scope.allYellow, $scope.allGreen, $scope.allDisabled);
 
         //Check if there is stored hide/display data, if not create two arrays: hidden & displayed jobs
-        if(localStorage.getItem("displayedJobs")===null && localStorage.getItem("hiddenJobs")===null)
+        if(localStorage.getItem("displayedJobs")===null && localStorage.getItem("hiddenJobs")===null && $scope.onlyOnStartup===true)
         {
             localStorage.setItem("displayedJobs", JSON.stringify($scope.tempDisplayedJobs));
             localStorage.setItem("hiddenJobs", JSON.stringify([]));
         }
         $scope.displayedJobs = JSON.parse(localStorage.getItem("displayedJobs"));
         $scope.hiddenJobs = JSON.parse(localStorage.getItem("hiddenJobs"));
+        $scope.onlyOnStartup = false;
     });
 
     //Remove underscore from job name

@@ -76,10 +76,21 @@ h1{
 }
 
 /* Delete button */
-.deleteButton {
+.deleteButton a {
     font-size: 20px;
+    color: white;
+    text-decoration: none;
     float:right;
     margin: 5px;
+}
+.deleteButton a {
+    color: white;
+    text-decoration: none;
+}
+.deleteButton a:hover {
+    color: white;
+    text-decoration: none;
+    background-color: rgba(0,0,0,0.2)
 }
 
 /* Health reports */
