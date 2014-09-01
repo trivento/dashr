@@ -1,9 +1,18 @@
 <div class="container-fluid dashboard_{{infoData.fontSize}}">
+
+    <!-- SHOW/HIDE AND PREFERENCES BUTTONS -->
+    <div class="preferencesButtons">
+    <button type="button" class="btn btn-default btn-xs preferenceButton" ng-click="showPreferences=!showPreferences">
+        <span class="glyphicon glyphicon-cog"></span>
+    </button>
+
+    <button type="button" class="btn btn-default btn-xs preferenceButton" ng-click="showDisplayJobsMenu=!showDisplayJobsMenu">
+        <span class="glyphicon glyphicon-plus"></span>
+    </button>
+    </div>
+
     <!-- HIDE/DISPLAY JOBS MENU -->
     <div class="containerDisplayJobsMenu">
-        <button type="button" class="btn btn-default btn-xs" ng-click="showDisplayJobsMenu=!showDisplayJobsMenu">
-            <span class="glyphicon glyphicon-plus"></span>
-        </button>
 
         <div ng-show="showDisplayJobsMenu" class="displayJobsMenu">
             <div ng-repeat="name in hiddenJobs">
@@ -20,24 +29,20 @@
     </div>
 
     <!-- PREFERENCES MENU -->
-    <div class="preferencesWindow">
+    <div class="containerPreferencesMenu">
 
-        <button type="button" class="btn btn-default btn-xs" ng-click="showPreferences=!showPreferences">
-            <span class="glyphicon glyphicon-cog"></span>
-        </button>
-
-        <div ng-show="showPreferences" class="options">
+        <div ng-show="showPreferences" class="preferencesMenu">
 
             <!-- Show/hide preferences -->
-            Hide extra info                     <input class="right" type="checkbox" ng-model="infoData.hideInfo" ng-change="submit()">
-            <br>Show health reports             <input class="right" type="checkbox" ng-model="infoData.showHealthReports" ng-change="submit()">
-            <br>Show number of builds           <input class="right" type="checkbox" ng-model="infoData.showNumberOfBuilds" ng-change="submit()">
-            <br>Show last completed build       <input class="right" type="checkbox" ng-model="infoData.showLastCompletedBuild" ng-change="submit()">
-            <br>Show last stable build          <input class="right" type="checkbox" ng-model="infoData.showLastStableBuild" ng-change="submit()">
-            <br>Show last failed build          <input class="right" type="checkbox" ng-model="infoData.showLastFailedBuild" ng-change="submit()">
-            <br>Show last successful build      <input class="right" type="checkbox" ng-model="infoData.showLastSuccessfulBuild" ng-change="submit()">
-            <br>Show last unstable build        <input class="right" type="checkbox" ng-model="infoData.showLastUnstableBuild" ng-change="submit()">
-            <br>Show last unsuccessful build    <input class="right" type="checkbox" ng-model="infoData.showLastUnsuccessfulBuild" ng-change="submit()">
+            Hide extra info                     <input class="fixedRight" type="checkbox" ng-model="infoData.hideInfo" ng-change="submit()">
+            <br>Show health reports             <input class="fixedRight" type="checkbox" ng-model="infoData.showHealthReports" ng-change="submit()">
+            <br>Show number of builds           <input class="fixedRight" type="checkbox" ng-model="infoData.showNumberOfBuilds" ng-change="submit()">
+            <br>Show last completed build       <input class="fixedRight" type="checkbox" ng-model="infoData.showLastCompletedBuild" ng-change="submit()">
+            <br>Show last stable build          <input class="fixedRight" type="checkbox" ng-model="infoData.showLastStableBuild" ng-change="submit()">
+            <br>Show last failed build          <input class="fixedRight" type="checkbox" ng-model="infoData.showLastFailedBuild" ng-change="submit()">
+            <br>Show last successful build      <input class="fixedRight" type="checkbox" ng-model="infoData.showLastSuccessfulBuild" ng-change="submit()">
+            <br>Show last unstable build        <input class="fixedRight" type="checkbox" ng-model="infoData.showLastUnstableBuild" ng-change="submit()">
+            <br>Show last unsuccessful build    <input class="fixedRight" type="checkbox" ng-model="infoData.showLastUnsuccessfulBuild" ng-change="submit()">
 
             <!-- Select font -->
             <br>Font size                       <select class="form-control option" ng-model="infoData.fontSize" ng-change="submit()">
