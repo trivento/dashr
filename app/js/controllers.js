@@ -9,10 +9,6 @@ var dashboardControllers = angular.module('dashboardControllers', []);
 dashboardControllers.controller('JobsCtrl', ['$scope', 'Dashboard', '$timeout',
   function($scope, Dashboard, $timeout) {
 
-    //Parse user preferences from local storage
-    var a = localStorage.getItem("userPrefs");
-    $scope.infoData = JSON.parse(a);
-
     //Calculate width of boxes
     $scope.getBoxWidth = function() {
     switch($scope.infoData.boxesInline)
@@ -31,6 +27,46 @@ dashboardControllers.controller('JobsCtrl', ['$scope', 'Dashboard', '$timeout',
                 return 12;
         }
     }
+
+    //Hide and display jobs
+    $scope.showDisplayJobsMenu = false;
+    $scope.tempDisplayedJobs = [];
+    $scope.deleteName = function (jobName)
+    {
+        for(var i = 0; i < $scope.displayedJobs.length; i++)
+        {
+            if($scope.displayedJobs[i]===jobName)
+            {
+                $scope.displayedJobs.splice(i, 1);
+                $scope.hiddenJobs.push(jobName);
+                $scope.updateJobsToLocalStorage();
+            }
+        }
+    };
+    $scope.addName = function(jobName)
+    {
+        for(var i = 0; i < $scope.displayedJobs.length; i++)
+        {
+            if($scope.hiddenJobs[i]===jobName)
+            {
+                $scope.hiddenJobs.splice(i, 1);
+                $scope.displayedJobs.push(jobName);
+                $scope.updateJobsToLocalStorage();
+            }
+        }
+    };
+    $scope.updateJobsToLocalStorage = function()
+    {
+        //Update the hide and displayed arrays
+        localStorage.setItem("displayedJobs", JSON.stringify($scope.displayedJobs));
+        localStorage.setItem("hiddenJobs", JSON.stringify($scope.hiddenJobs));
+    }
+    $scope.refreshDisplayedJobs = function() {
+          localStorage.removeItem("displayedJobs");
+          localStorage.removeItem("hiddenJobs");
+          location.reload();
+    }
+    $scope.onlyOnStartup = true;
 
     //Animation of loading dots
     $scope.dots = ["", "", "", ""];
@@ -64,6 +100,7 @@ dashboardControllers.controller('JobsCtrl', ['$scope', 'Dashboard', '$timeout',
 
         for(var i = 0; i < result.jobs.length; i++)
             {
+                $scope.tempDisplayedJobs.push(result.jobs[i].name);
                 switch(result.jobs[i].color)
                     {
                         case "red":
@@ -81,6 +118,16 @@ dashboardControllers.controller('JobsCtrl', ['$scope', 'Dashboard', '$timeout',
                     }
             }
         $scope.allJobsSorted.push($scope.allRed, $scope.allYellow, $scope.allGreen, $scope.allDisabled);
+
+        //Check if there is stored hide/display data, if not create two arrays: hidden & displayed jobs
+        if(localStorage.getItem("displayedJobs")===null && localStorage.getItem("hiddenJobs")===null && $scope.onlyOnStartup===true)
+        {
+            localStorage.setItem("displayedJobs", JSON.stringify($scope.tempDisplayedJobs));
+            localStorage.setItem("hiddenJobs", JSON.stringify([]));
+        }
+        $scope.displayedJobs = JSON.parse(localStorage.getItem("displayedJobs"));
+        $scope.hiddenJobs = JSON.parse(localStorage.getItem("hiddenJobs"));
+        $scope.onlyOnStartup = false;
     });
 
     //Remove underscore from job name
@@ -125,12 +172,7 @@ dashboardControllers.controller('JobsCtrl', ['$scope', 'Dashboard', '$timeout',
                 return heading;
             } else return subHeading;
     }
-  }]);
 
-/* Preferences Controller */
-dashboardControllers.controller('PreferencesCtrl', ['$scope',
-  function($scope)
-  {
     //Set default preferences in local storage if local storage is empty
     if(localStorage.getItem("userPrefs")===null)
     {
@@ -150,18 +192,19 @@ dashboardControllers.controller('PreferencesCtrl', ['$scope',
                                    "boxHeight"                 : 250
                                };
         localStorage.setItem("userPrefs", JSON.stringify($scope.tempUserPrefs));
+        $scope.infoData = JSON.parse(localStorage.getItem("userPrefs"));
     }
 
     $scope.showPreferences = false;
     if(localStorage.getItem("userPrefs")!=null)
     {
         var a = localStorage.getItem("userPrefs");
-        $scope.tempUserPrefs = JSON.parse(a);
+        $scope.infoData = JSON.parse(a);
     }
 
     //Rewrite preferences to local storage
     $scope.submit = function() {
-        localStorage.setItem("userPrefs", JSON.stringify($scope.tempUserPrefs));
+        localStorage.setItem("userPrefs", JSON.stringify($scope.infoData));
+        $scope.infoData = JSON.parse(localStorage.getItem("userPrefs"));
     }
-
   }]);

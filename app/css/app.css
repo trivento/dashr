@@ -5,7 +5,10 @@ body {
 	font-family:thinFont;
 	src: url('../fonts/basictitlefont.ttf');
 }
-
+@font-face {
+	font-family:preferencesFont;
+	src: url('../fonts/MankSans.ttf');
+}
 /* Loading screen */
 #loading {
     width:200px;
@@ -70,6 +73,35 @@ h1{
 .disabled {
     color: white;
     background-color: #999999;
+}
+
+/* Delete button */
+.deleteButton a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    float:right;
+    margin: 5px;
+}
+.deleteButton a {
+    color: white;
+    text-decoration: none;
+}
+.deleteButton a:hover {
+    color: white;
+    text-decoration: none;
+    background-color: rgba(0,0,0,0.2)
+}
+/* Preferences buttons */
+.preferencesButtons{
+    position: fixed;
+    top: 5px;
+    right: 10px;
+    z-index: 1;
+}
+.preferenceButton {
+    float: right;
+    margin: 5px 0px 0px 5px;
 }
 
 /* Health reports */
@@ -171,6 +203,45 @@ h1{
  .disabledJobInfo a:visited {
      color: #1E2120;
  }
+ /* Display/hide jobs menu & preferences window */
+.containerPreferencesMenu, .containerDisplayJobsMenu {
+    margin-top: 5px;
+    font-size: 24px;
+    position: fixed;
+    right:10px;
+    z-index:1;
+    text-align:right;
+}
+.containerDisplayJobsMenu {
+    right: 40px;
+}
+.preferencesMenu, .displayJobsMenu  {
+    width: 300px;
+    height: 375px;
+    font-family:preferencesFont;
+    font-size: 16px;
+    border: 1px solid #212121;
+    background: #ababab;
+    padding: 5px;
+    position: fixed;
+    right: 5px;
+    top: 35px;
+    text-align:left;
+}
+.displayJobsMenu {
+    right: 35px;
+    height: auto;
+}
+.option {
+    color:black;
+    width:70px;
+    float:right;
+}
+/* align right */
+.fixedRight {
+    position: absolute;
+    right: 15px;
+}
 
 /* Footer */
 .footer {
