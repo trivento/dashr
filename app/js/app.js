@@ -14,11 +14,11 @@ var dashr = angular.module('dashr', [
 dashr.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
-      when('/dashboard', {
-        templateUrl: 'partials/dashboard.html',
+      when('/jenkins', {
+        templateUrl: 'partials/jenkins/index.html',
         controller: 'JobsCtrl'
       }).
       otherwise({
-        redirectTo: '/dashboard'
+        redirectTo: '/jenkins'
       });
   }]);
