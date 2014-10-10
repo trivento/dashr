@@ -86,6 +86,20 @@ it whenever you like.
 - When the data keeps loading there might be a problem with authentication. When this message pops up in console: 
   "No 'Access-Control-Allow-Origin' header is present on the requested resource." the CORS requests must be enabled in the browser.
 
+
+### Running the app during production
+
+There are  different solutions for hosting Dashr. One easy and fast solution is NGINX.
+
+
+## NGINX
+
+1. Download and unpack NGINX (http://nginx.org/en/download.html)
+
+2. Copy the 'app' folder to NGINX/html
+
+3. And start NGINX.
+
 ## Authors
 
 - Henk Jurriens @henkjurriens
