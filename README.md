@@ -87,12 +87,12 @@ it whenever you like.
   "No 'Access-Control-Allow-Origin' header is present on the requested resource." the CORS requests must be enabled in the browser.
 
 
-### Running the app during production
+## Running the app during production
 
 There are  different solutions for hosting Dashr. One easy and fast solution is NGINX.
 
 
-## NGINX
+### NGINX
 
 1. Download and unpack NGINX (http://nginx.org/en/download.html)
 
