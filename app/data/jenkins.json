@@ -2,24 +2,13 @@
     "description" : null,
     "jobs" : [
         {
-            "name" : "BlueView 2.3.x sonaaar",
-            "url" : "http://145.119.169.127:8080/job/BlueView%202.3.x%20sonar/",
-            "color" : "blue"
-        },
-        {
-            "name" : "BlueView 2.3.x SVN",
-            "url" : "http://145.119.169.127:8080/job/BlueView%202.3.x%20SVN/",
-            "color" : "blue"
-        },
-        {
-            "name" : "BlueView to Test",
-            "url" : "http://145.119.169.127:8080/job/BlueView%20to%20Test/",
+            "name" : "Test",
+            "url" : "http://...",
             "color" : "blue"
         }
     ],
-    "name" : "BlueView",
+    "name" : "Test",
     "property" : [
 
-    ],
-    "url" : "http://145.119.169.127:8080/view/BlueView/"
+    ]
 }
